@@ -4,7 +4,7 @@ In this repository I will upload all the research and development of a personal 
 
 
 Hello evryone!
-happy New Year!
+Happy New Year!
 
 I've started documenting about the core concepts that I really need to know in order to bring this project to reality.
 I've done some research about the communication protocols needed in this project such as SPI, I2C and UART, usecases when I need them, advantages and disadvantages in using them.
