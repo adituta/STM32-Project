@@ -19,6 +19,7 @@ Also, during the weeks since creating this repository I researched the reasons w
 Of course, I will not start to build my own powerplant or car and find use for the RTOS. This operating systems are really well fitted in probes that gather data from the environment (for civil or military applications). As the project name suggests, my project has to collect data from the nature, do some processing on it, extrat some valuable insight and then send it to the master.
 
 During this holyday, I received a semester project at Digital Signal Processing Course in which I had to think about a problem in which I can apply concepts of Frecquency Analysis in order to solve it. I thought that an RTOS can sense the enemy forces advancing and can determine the direction of fire from the enemy. This can be achieved by having an array of microphonnes through which the support can triangulate the direction af attacking troops. In addition, with other sensors on board the support can determine the enemy's position more precisely.
+- Link to the DSP homework: 
 
 Another developing ways is to make a system that can caputure images from time to time and detect abnormalities. Also, an autofocus system can be done by adjusting the image around a point of interest (mechanically adjusting the lenses or sharpening the image digitally).
 
