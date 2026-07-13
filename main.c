@@ -21,8 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include<stdio.h>
-#include "string.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,7 +40,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
@@ -50,83 +48,18 @@ UART_HandleTypeDef huart2;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+	int maincount = 0;
 
-	uint8_t data[] = "Hello world\r\n";
-	uint32_t numar = 123;
-	uint8_t sir_numar[5];
-
-	uint8_t TxData[10240];
-	int isSent = 1;
-
-	int countloop = 0;
-	int countinterrupt = 0;
-
-	int indx=49;		// char '1'
-
-	//Callback-uri
-	// se declanseaza cand DMA a trimis prima jumatate din date. In acest moment
-	//se rescrie prima jumatate a bufferului cu acelasi octet (indx) apoi incrementeaza indx
-	void HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart){
-		for(uint32_t i = 0;i<5120;i++){
-		  		 TxData[i] = indx;
-		}
-		indx++;
+	void some_function (void){
+		static int localcount = 0;
+		localcount++;
 	}
-
-	//se declanseaza la finalul transferului complet. Rescrie a doua jumatate cu indx
-	// incrementeaza iar, apoi daca indx >=60 opreste DMA cu HAL_UART_DMAStop
-	void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
-		for(uint32_t i = 5120;i<10240;i++){
-			TxData[i] = indx;
-		}
-		indx++;
-
-		if(indx>=60){
-			HAL_UART_DMAStop(&huart2);
-		}
-		isSent = 1;
-		countinterrupt ++;
-	}
-
-
-
-
-
-	///------------ proiect de receptie a datelor trimise prin UART catre placa -----------------
-	// modificari facute in CubeMX
-	// dezactivez DMA si las active doar intreruperile
-	// vreau sa ma folosesc de intreruperi si sa vad cum functioneaza astea
-
-	uint8_t FinalData[20];
-	uint8_t RxData[20];
-	uint8_t temp[2];
-	int indx2  = 0;
-	//am nevoie de o functie de callback
-	// intreruperea nu se activeaza (trigger) cand nr de octeti precizati nu se primesc
-	// avantajul e acela ca pricesorul nu e blocat in timpul asteptarii datelor
-	// restul codului se executa obisnuit
-	// cand nr de octeti e egal cu cel care tb primiti, se face trigger la intrerupere
-	// la aruncarea intreruperii, se va executa functia de callback (care efectiv executa ce trebuie sa execute
-	// la activarea acelei intreruperi)
-	// --> datele se vor procesa inauntrul functiei de callback
-	// --> momentan nu procesez date acum, deci o las pentru mai incolo
-
-	void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-		memcpy(RxData+indx2, temp, 1);
-		if(++indx2>=20)
-			indx2 = 0;
-
-		HAL_UART_Receive_IT(&huart2, temp, 1);
-	}
-
-
 /* USER CODE END 0 */
 
 /**
@@ -158,25 +91,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
-//  	 for(uint32_t i = 0;i<10240;i++){
-//  		 TxData[i] = i&(0xff);
-//  	 }
-
-//  	 HAL_UART_Transmit_DMA(&huart2, TxData, 10240);		// efectiv aici dau start si DMA face singur treaba
-  	 	 	 	 	 	 	 	 	 	 	 	 	 	 //neconditionat de CPU
-  	 //DMA se opreste singur de indata ce se adeveresc conditiile interne
-
-  	  HAL_UART_Receive_IT(&huart2, temp, 1);
-  	  // apelul de functie de mai sus trimite o intrerupere cand numarul de octeti precizati
-  	  //este primit
-
-  	  //avantajul este ca procesorul nu este blocat in tot acest timp, asa cum am vazut
-  	  //la functia HAL_UART_Receive(..........)
-
-
 
   /* USER CODE END 2 */
 
@@ -185,53 +100,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+ 	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+	  HAL_Delay(500);
+	  maincount++;
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+	  HAL_Delay(2000);
+	  maincount++;
+	  some_function();
     /* USER CODE BEGIN 3 */
-
-//	  if(isSent ==1){
-//	  		  	  HAL_UART_Transmit_IT(&huart2, TxData, 10240);
-//	  		  isSent=0;
-//	  	  }
-
-//	  if(isSent ==1){
-//		  HAL_UART_Transmit_DMA(&huart2, TxData, 10240);
-//		  isSent=0;
-//	  }
-
-	  //HAL_UART_Transmit(&huart2, TxData, 10240, HAL_MAX_DELAY);
-//	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-//	  HAL_Delay(1000);
-//	  countloop++;
-
-
-	  //// ---------------- proiect de receptie date trimise UART
-
-	  //HAL_UART_Receive(&huart2, RxData, 5, HAL_MAX_DELAY);
-	  // hal uart receive receptioneaza date in modul blocant
-	  //timeout-ul joaca un rol important aici --> functia asteapta doar pentru perioada asta de timp
-	  //daca cei 5 octeti nu sun receptionati in cele 5 secunde, trec mai departe (functia intra in timeout)
-
-	  //functia de mai sus nu trece mai departe decat atunci cand bufferul de 5 octeti
-	  //pe care il asteapta este umplut. Functia sta atat timp cat ii spun sa stea (1 secunda
-	  //sau HAL_MAX_DELAY, adica pana se umple bufferul
-
-	  //Modul acesta de lucru e foarte util in alicatii rtos, cand pot crea un proces
-	  //specializat doar pe receptia de date
-
-	  //acum nu folosim RTOS, o sa comentez
-
-	  // ------ stocare single data bytes foloisnd intreruperi
-
-
-	  if(temp[0]=='\n'){
-		  memcpy(FinalData, RxData, indx);
-		  indx = 0;
-	  		}
-
-	  // in partea asta o sa las blinking LED sa funcitoneze inca, pentru monitorizare
-	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	  HAL_Delay(1000);
-
   }
   /* USER CODE END 3 */
 }
@@ -280,39 +156,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-}
-
-/**
-  * @brief USART2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART2_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART2_Init 0 */
-
-  /* USER CODE END USART2_Init 0 */
-
-  /* USER CODE BEGIN USART2_Init 1 */
-
-  /* USER CODE END USART2_Init 1 */
-  huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
-  huart2.Init.StopBits = UART_STOPBITS_1;
-  huart2.Init.Parity = UART_PARITY_NONE;
-  huart2.Init.Mode = UART_MODE_TX_RX;
-  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART2_Init 2 */
-
-  /* USER CODE END USART2_Init 2 */
-
 }
 
 /**
