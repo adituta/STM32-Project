@@ -128,6 +128,7 @@ int main(void)
   uint32_t now = 0;
   uint32_t last_blink = 0;
   uint32_t last_tick = 0;
+  uint32_t loop_count = 0;
 
 
 
@@ -163,12 +164,16 @@ int main(void)
 	  }
 
 	  if (now -last_tick >=1000){
-		  int len_num = sprintf(num_buffer, "%lu\r\n", now);
+		  int len_num = sprintf(num_buffer, "%lu (loop count = %lu)\r\n", now/1000, loop_count);
+		  loop_count = 0;
 		  send_message(num_buffer, len_num);
 		  last_tick = now;
 	  }
 
 
+	  // mai departe
+
+	  ++loop_count;
   }
   /* USER CODE END 3 */
 }
