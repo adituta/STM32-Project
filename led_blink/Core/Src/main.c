@@ -45,6 +45,10 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
+uint8_t button_press =0;		// mereu initializat la 0
+uint16_t blink_delays[] = {500, 250, 100};
+uint8_t blink_delay = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,6 +77,13 @@ static void MX_USART2_UART_Init(void);
 	}
 
 
+	void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+		if(GPIO_Pin == BTN_Pin){
+			button_press = 1;
+		}
+	}
+
+
 
 /* USER CODE END 0 */
 
@@ -87,15 +98,17 @@ int main(void)
 
 	//aici pot sa imi declar variabile pe care sa le folosesc mai jos
 	uint8_t mesaj1[] = "Mesaj trimis!\r\n";
-	uint8_t mesaj2[] = "Mesaj primit!\r\n";
-	uint8_t mesaj3[] = "Tick message!\r\n";
+	//uint8_t mesaj2[] = "Mesaj primit!\r\n";
+	//uint8_t mesaj3[] = "Tick message!\r\n";
+	uint8_t mesaj4[] = "Buton apasat!\r\n";
 
-	uint8_t num_buffer[10];
+	uint8_t num_buffer[40];
 	// in embedded, nu pot sa aflu dimensiunea unui array catre care pointeaza un pointer
 	// pentru asta trebuie sa plimb impreuna cu array-ul si dimensiunea lui
 	uint8_t len_mesaj1 = 15;
-	uint8_t len_mesaj2 = 15;
-	uint8_t len_mesaj3 = 15;
+	//uint8_t len_mesaj2 = 15;
+	//uint8_t len_mesaj3 = 15;
+	uint8_t len_mesaj4 = 15;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -130,7 +143,7 @@ int main(void)
   uint32_t last_tick = 0;
   uint32_t loop_count = 0;
 
-
+  send_message("Incepe exercitiul stm32_timer!\r\n", 32);
 
   while (1)
   {
@@ -154,7 +167,7 @@ int main(void)
 	  // varianila now se incrementeaza la fiecare 1 milisecunda
 
 
-	  if(now-last_blink > 500){
+	  if(now-last_blink > blink_delays[blink_delay]){
 		  // vreau sa trimit si un mesaj prin uart catre laptop
 		  send_message(mesaj1, len_mesaj1);
 
@@ -173,7 +186,21 @@ int main(void)
 
 	  // mai departe
 
+	  //lucrez de aici incolo la partea de primire intreruperi prin EXTI (external interrupt)
+	  if(button_press == 1){
+		  send_message(mesaj4, len_mesaj4);
+		  ++blink_delay;
+		  if(blink_delay>= sizeof(blink_delays)/sizeof(blink_delays[0]))
+			  blink_delay = 0;
+		  button_press = 0;
+	  }
+
 	  ++loop_count;
+
+
+
+
+
   }
   /* USER CODE END 3 */
 }
@@ -275,17 +302,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : LED_Pin */
-  GPIO_InitStruct.Pin = LED_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  /*Configure GPIO pin : BTN_Pin */
+  GPIO_InitStruct.Pin = BTN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BTN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LED2_Pin */
   GPIO_InitStruct.Pin = LED2_Pin;
@@ -293,6 +316,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED2_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
