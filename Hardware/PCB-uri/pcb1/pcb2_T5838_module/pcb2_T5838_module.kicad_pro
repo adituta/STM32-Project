@@ -488,14 +488,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pcb1.kicad_pro",
+    "filename": "pcb2_T5838_module.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.4,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -506,7 +506,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -656,17 +656,17 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "pcb1.kicad_sch",
+        "filename": "pcb2_T5838_module.kicad_sch",
         "name": "Root",
-        "uuid": "55a47e88-7a1d-4fe8-83fb-7558390e5c7b"
+        "uuid": "964ffe9c-669a-4e94-9eaa-368afc4dd59a"
       }
     ],
-    "used_designators": "U1-2,C1,#FLG1-2,J1,R1-2,#PWR1-2,MK1",
+    "used_designators": "MK1,C1-2,R1-3,J1-2,#PWR1-2",
     "variants": []
   },
   "sheets": [
     [
-      "55a47e88-7a1d-4fe8-83fb-7558390e5c7b",
+      "964ffe9c-669a-4e94-9eaa-368afc4dd59a",
       "Root"
     ]
   ],

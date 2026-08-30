@@ -3263,6 +3263,12 @@
 		(uuid "1f99d4e4-1d4b-4005-800f-31acc03bc5de")
 	)
 	(junction
+		(at 226.06 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "203871cc-dff7-4e74-ba2a-d7b45b622b57")
+	)
+	(junction
 		(at 86.36 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3531,6 +3537,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7f8a4729-a338-4d68-a646-08fc0b491221")
+	)
+	(junction
+		(at 226.06 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85237142-0679-400d-b2e8-e43488eb251e")
 	)
 	(junction
 		(at 24.13 93.98)
@@ -4146,6 +4158,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 88.9) (xy 228.6 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18af2089-c74f-46c3-889b-dc3510580687")
+	)
+	(wire
+		(pts
 			(xy 118.11 78.74) (xy 118.11 81.28)
 		)
 		(stroke
@@ -4536,7 +4558,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 88.9) (xy 228.6 88.9)
+			(xy 209.55 88.9) (xy 226.06 88.9)
 		)
 		(stroke
 			(width 0)
@@ -6046,7 +6068,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 81.28) (xy 232.41 81.28)
+			(xy 220.98 81.28) (xy 226.06 81.28)
 		)
 		(stroke
 			(width 0)
@@ -6343,6 +6365,16 @@
 			(type default)
 		)
 		(uuid "ae24e134-58d8-47ab-a861-19e066737ce2")
+	)
+	(wire
+		(pts
+			(xy 226.06 81.28) (xy 232.41 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae59339a-3a7a-4ea5-8cff-2e2e3e6d5eda")
 	)
 	(wire
 		(pts
@@ -12687,6 +12719,88 @@
 			(project "pcb4_placa_retea_v1"
 				(path "/e8f57aa6-9eec-405a-bc1f-aa1310f29cd4"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 226.06 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7a3ac33-7b2b-49d1-8fca-a4bb1d977b2e")
+		(property "Reference" "C16"
+			(at 229.87 83.8199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 229.87 86.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.0252 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 226.06 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5ef01862-47b7-4c3b-b23a-636e2809b2f7")
+		)
+		(pin "1"
+			(uuid "b9697074-b4e2-4c20-9014-0ebaa846b54d")
+		)
+		(instances
+			(project "pcb4_placa_retea_v1"
+				(path "/e8f57aa6-9eec-405a-bc1f-aa1310f29cd4"
+					(reference "C16")
 					(unit 1)
 				)
 			)
