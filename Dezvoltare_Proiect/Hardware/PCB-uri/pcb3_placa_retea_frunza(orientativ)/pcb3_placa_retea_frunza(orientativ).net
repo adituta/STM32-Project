@@ -1,0 +1,2610 @@
+(export
+	(version "E")
+	(design
+		(source "D:\\1. Fisiere Transfer Laptop\\1. ATM Calculatoare\\Licenta\\PCB-uri\\pcb3_placa_retea_frunza(orientativ)\\pcb3_placa_retea_frunza(orientativ).kicad_sch")
+		(date "2026-08-17T00:52:37")
+		(tool "Eeschema 10.0.5")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "100nF")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "34dffd7b-627a-43e6-9b43-974aefb206fd")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "100nF")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "aefb52a0-04c2-4f3f-b771-7752bf3bd990")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "100nF")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f91c3fd8-9aa4-4869-8c2e-703846db1efa")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "100nF")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "23dcc9cb-7d11-4935-b9bb-2931940965cd")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "4.7/10 μF")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a68e56ba-c54f-4fb9-bef3-ba48d1f375cf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "4.7/10μF")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8181cb33-59c5-4202-a676-e39f9bdb24ed")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "1nF 2kV")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5e8824c9-08f6-4e2c-a896-646777927ce2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "SM712_SOT23")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(datasheet "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf")
+			(description "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			(fields
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf")
+				(field
+					(name "Description") "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			)
+			(libsource
+				(lib "Diode")
+				(part "SM712_SOT23")
+				(description "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "transient voltage suppressor thyrector transil")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT?23*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c8046180-2394-4cdc-8d7c-36d666949398")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D2")
+			(value "SM712_SOT23")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(datasheet "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf")
+			(description "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			(fields
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf")
+				(field
+					(name "Description") "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			)
+			(libsource
+				(lib "Diode")
+				(part "SM712_SOT23")
+				(description "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "transient voltage suppressor thyrector transil")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT?23*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b8e839ac-39cc-4e14-b577-6a45d14f46e0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D3")
+			(value "LED")
+			(description "Light emitting diode")
+			(fields
+				(field
+					(name "Sim.Pins") "1=K 2=A")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode")
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "Sim.Pins")
+				(value "1=K 2=A")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4898c993-e2d1-47b1-b530-d52f8510e1d7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FB1")
+			(value "4.7/10 μH")
+			(description "Ferrite bead")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Ferrite bead")
+			)
+			(libsource
+				(lib "Device")
+				(part "FerriteBead")
+				(description "Ferrite bead")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "L ferrite bead inductor filter")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Inductor_* L_* *Ferrite*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "47b70656-cd58-4370-bc08-02254b6f7a98")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "Conn_01x06_Pin")
+			(description "Generic connector, single row, 01x06, script generated")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x06, script generated")
+			)
+			(libsource
+				(lib "Connector")
+				(part "Conn_01x06_Pin")
+				(description "Generic connector, single row, 01x06, script generated")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "19ee35d1-19c2-4fa6-ada7-012e21dc10b3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "Screw_Terminal_01x02")
+			(description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(libsource
+				(lib "Connector")
+				(part "Screw_Terminal_01x02")
+				(description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "screw terminal")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "TerminalBlock*:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "671cd3dd-2cf7-4501-baaf-0a33ffa09f74")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J3")
+			(value "Screw_Terminal_01x02")
+			(description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(libsource
+				(lib "Connector")
+				(part "Screw_Terminal_01x02")
+				(description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "screw terminal")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "TerminalBlock*:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ddcdb1a9-5c09-4c27-ad70-70168258ee71")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "120 ohm")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a1cd9a1f-c1d4-4f5a-b03f-788d7e5697ba")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "120 ohm")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "240f15a5-2024-4a87-b4c5-af4f97204b44")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "10k")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9b4952f2-d0e9-45dd-bf30-3d39544bcbfb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "R")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "15592345-cf51-48e0-8254-4eb8ba65aeee")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TH1")
+			(value "Thermistor_PTC")
+			(description "Temperature dependent resistor, positive temperature coefficient")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(libsource
+				(lib "Device")
+				(part "Thermistor_PTC")
+				(description "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "resistor PTC thermistor sensor RTD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_* RV_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "85ce983b-9651-4571-af1c-7b9b6d057cfd")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TH2")
+			(value "Thermistor_PTC")
+			(description "Temperature dependent resistor, positive temperature coefficient")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(libsource
+				(lib "Device")
+				(part "Thermistor_PTC")
+				(description "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "resistor PTC thermistor sensor RTD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_* RV_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0fca2067-1302-40de-ad7d-953840ad7b78")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TH3")
+			(value "Thermistor_PTC")
+			(description "Temperature dependent resistor, positive temperature coefficient")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(libsource
+				(lib "Device")
+				(part "Thermistor_PTC")
+				(description "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "resistor PTC thermistor sensor RTD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_* RV_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f60b8461-74a2-4785-a159-7b8937674905")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TH4")
+			(value "Thermistor_PTC")
+			(description "Temperature dependent resistor, positive temperature coefficient")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(libsource
+				(lib "Device")
+				(part "Thermistor_PTC")
+				(description "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "resistor PTC thermistor sensor RTD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_* RV_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4a8f9f52-7d2c-49d9-b681-45b01cbc3571")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "Send Data")
+			(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+			(datasheet "https://www.ti.com/lit/ds/symlink/thvd1450.pdf")
+			(description "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/thvd1450.pdf")
+				(field
+					(name "Description") "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			)
+			(libsource
+				(lib "Interface_UART")
+				(part "THVD1450D")
+				(description "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "tranceiver rs485 esd")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a044d4e5-ee0e-4523-a09b-d1477083e244")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "Receive Sync")
+			(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+			(datasheet "https://www.ti.com/lit/ds/symlink/thvd1450.pdf")
+			(description "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/thvd1450.pdf")
+				(field
+					(name "Description") "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			)
+			(libsource
+				(lib "Interface_UART")
+				(part "THVD1450D")
+				(description "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "tranceiver rs485 esd")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c693d3b8-5c67-46f5-9bda-e11b469af4bf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U4")
+			(value "B0505S-1WR2")
+			(footprint "B0505S-1WR2_MNS")
+			(datasheet "B0505S-1WR2")
+			(fields
+				(field
+					(name "Footprint") "B0505S-1WR2_MNS")
+				(field
+					(name "Datasheet") "B0505S-1WR2")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "2026-08-16_16-11-47")
+				(part "B0505S-1WR2")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "B0505S-1WR2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "B0505S-1WR2_MNS")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6c1ef840-90f1-4f29-b6d5-85b4dbc171ee")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U5")
+			(value "ISO7721D")
+			(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+			(datasheet "https://www.ti.com/lit/ds/symlink/iso7721.pdf")
+			(description "Low Power Dual-Channel 1/1 Digital Isolator, 100Mbps 11ns, Fail-Safe High, SOIC-8 (150mil)")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/iso7721.pdf")
+				(field
+					(name "Description") "Low Power Dual-Channel 1/1 Digital Isolator, 100Mbps 11ns, Fail-Safe High, SOIC-8 (150mil)")
+			)
+			(libsource
+				(lib "Isolator")
+				(part "ISO7721D")
+				(description "Low Power Dual-Channel 1/1 Digital Isolator, 100Mbps 11ns, Fail-Safe High, SOIC-8 (150mil)")
+			)
+			(property
+				(name "Sheetname")
+				(value "pcb3_placa_retea_frunza(orientativ)")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pcb3_placa_retea_frunza(orientativ).kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "2Ch Dual Digital Isolator 100Mbps")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ab7fc2f5-25bf-459b-a868-e3c64e70c802")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "2026-08-16_16-11-47")
+			(part "B0505S-1WR2")
+			(docs "B0505S-1WR2")
+			(footprints
+				(fp "B0505S-1WR2_MNS")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "B0505S-1WR2")
+				(field
+					(name "Footprint") "B0505S-1WR2_MNS")
+				(field
+					(name "Datasheet") "B0505S-1WR2")
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "power_out")
+				)
+				(pin
+					(num "2")
+					(name "VIN")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "0V")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "+VO")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "Conn_01x06_Pin")
+			(description "Generic connector, single row, 01x06, script generated")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x06_Pin")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x06, script generated")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "Pin_6")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "Screw_Terminal_01x02")
+			(description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "TerminalBlock*:*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Screw_Terminal_01x02")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "FerriteBead")
+			(description "Ferrite bead")
+			(footprints
+				(fp "Inductor_*")
+				(fp "L_*")
+				(fp "*Ferrite*")
+			)
+			(fields
+				(field
+					(name "Reference") "FB")
+				(field
+					(name "Value") "FerriteBead")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Ferrite bead")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "LED")
+			(description "Light emitting diode")
+			(footprints
+				(fp "LED*")
+				(fp "LED_SMD:*")
+				(fp "LED_THT:*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "LED")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode")
+				(field
+					(name "Sim.Pins") "1=K 2=A")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "Thermistor_PTC")
+			(description "Temperature dependent resistor, positive temperature coefficient")
+			(footprints
+				(fp "R_*")
+				(fp "RV_*")
+			)
+			(fields
+				(field
+					(name "Reference") "TH")
+				(field
+					(name "Value") "Thermistor_PTC")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Temperature dependent resistor, positive temperature coefficient")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Diode")
+			(part "SM712_SOT23")
+			(description "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			(docs "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf")
+			(footprints
+				(fp "SOT?23*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "SM712_SOT23")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sm712_datasheet.pdf.pdf")
+				(field
+					(name "Description") "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "common")
+					(type "input")
+				)
+			)
+		)
+		(libpart
+			(lib "Interface_UART")
+			(part "THVD1450D")
+			(description "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+			(docs "https://www.ti.com/lit/ds/symlink/thvd1450.pdf")
+			(footprints
+				(fp "*SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "THVD1450D")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/thvd1450.pdf")
+				(field
+					(name "Description") "3.3-V to 5-V RS-485 transceiver with ±18-kV IEC ESD protection, SOIC-8")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "RO")
+					(type "output")
+				)
+				(pin
+					(num "2")
+					(name "~{RE}")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "DE")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "DI")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "A")
+					(type "bidirectional")
+				)
+				(pin
+					(num "7")
+					(name "B")
+					(type "bidirectional")
+				)
+				(pin
+					(num "8")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Isolator")
+			(part "ISO7721D")
+			(description "Low Power Dual-Channel 1/1 Digital Isolator, 100Mbps 11ns, Fail-Safe High, SOIC-8 (150mil)")
+			(docs "https://www.ti.com/lit/ds/symlink/iso7721.pdf")
+			(footprints
+				(fp "*SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ISO7721D")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/iso7721.pdf")
+				(field
+					(name "Description") "Low Power Dual-Channel 1/1 Digital Isolator, 100Mbps 11ns, Fail-Safe High, SOIC-8 (150mil)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VCC1")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "OUTA")
+					(type "output")
+				)
+				(pin
+					(num "3")
+					(name "INB")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "GND1")
+					(type "power_in")
+				)
+				(pin
+					(num "5")
+					(name "GND2")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "OUTB")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "INA")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "VCC2")
+					(type "power_in")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "2026-08-16_16-11-47")
+			(uri "C:/Users/tutaa/Downloads/ul_B0505S-1WR2/KiCADv6/2026-08-16_16-11-47.kicad_sym")
+		)
+		(library
+			(logical "Connector")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Diode")
+			(uri "${KICAD10_SYMBOL_DIR}/Diode.kicad_sym")
+		)
+		(library
+			(logical "Interface_UART")
+			(uri "${KICAD10_SYMBOL_DIR}/Interface_UART.kicad_sym")
+		)
+		(library
+			(logical "Isolator")
+			(uri "${KICAD10_SYMBOL_DIR}/Isolator.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "U5")
+				(pin "4")
+				(pinfunction "GND1_4")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "Net-(D1-A1)")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "A1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "B_7")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "3")
+			(name "Net-(D1-A2)")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "A2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "A_6")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "4")
+			(name "Net-(D1-common)")
+			(class "Default")
+			(node
+				(ref "C2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "3")
+				(pinfunction "common_3")
+				(pintype "input")
+			)
+			(node
+				(ref "D2")
+				(pin "3")
+				(pinfunction "common_3")
+				(pintype "input")
+			)
+			(node
+				(ref "D3")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "~{RE}_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "DE_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U4")
+				(pin "3")
+				(pinfunction "0V_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "5")
+				(pinfunction "GND2_5")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "5")
+			(name "Net-(D2-A1)")
+			(class "Default")
+			(node
+				(ref "D2")
+				(pin "1")
+				(pinfunction "A1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "7")
+				(pinfunction "B_7")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "6")
+			(name "Net-(D2-A2)")
+			(class "Default")
+			(node
+				(ref "D2")
+				(pin "2")
+				(pinfunction "A2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "A_6")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "7")
+			(name "Net-(D3-A)")
+			(class "Default")
+			(node
+				(ref "D3")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "Net-(J1-Pin_5)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U5")
+				(pin "2")
+				(pinfunction "OUTA_2")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "9")
+			(name "Net-(J1-Pin_6)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "6")
+				(pinfunction "Pin_6_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U5")
+				(pin "3")
+				(pinfunction "INB_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "10")
+			(name "Net-(J2-Pin_1)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH2")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "Net-(J2-Pin_2)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH1")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "Net-(J3-Pin_1)")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH4")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "Net-(J3-Pin_2)")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TH3")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "Net-(U1-DE)")
+			(class "Default")
+			(node
+				(ref "C2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "~{RE}_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "DE_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "VCC_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "8")
+				(pinfunction "VCC_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U5")
+				(pin "8")
+				(pinfunction "VCC2_8")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "15")
+			(name "Net-(U1-DI)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "DI_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U5")
+				(pin "6")
+				(pinfunction "OUTB_6")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "16")
+			(name "Net-(U2-DI)")
+			(class "Default")
+			(node
+				(ref "R3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "DI_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "17")
+			(name "Net-(U2-RO)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "RO_1")
+				(pintype "output")
+			)
+			(node
+				(ref "U5")
+				(pin "7")
+				(pinfunction "INA_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "18")
+			(name "Net-(U4-+VO)")
+			(class "Default")
+			(node
+				(ref "C6")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "4")
+				(pinfunction "+VO_4")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "19")
+			(name "VCC")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "2")
+				(pinfunction "VIN_2")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U5")
+				(pin "1")
+				(pinfunction "VCC1_1")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "20")
+			(name "unconnected-(J1-Pin_1-Pad1)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "unconnected-(J1-Pin_2-Pad2)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "unconnected-(U1-RO-Pad1)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "RO_1")
+				(pintype "output")
+			)
+		)
+	)
+)
