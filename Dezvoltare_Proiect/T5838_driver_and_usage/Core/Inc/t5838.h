@@ -1,39 +1,44 @@
-#ifndef INC_T5838_H_
-#define INC_T5838_H_
+#ifndef T5838_H
+#define T5838_H
 
-#include "main.h"
+#include "stm32f4xx_hal.h"
 
-/* Adresa I2C implicită a T5838 */
-#define T5838_I2C_ADDR         (0x38 << 1)
+// constante pentru pinii folositi
+#define T5838_THSEL_PORT	GPIOA
+#define T5838_THSEL_PIN		GPIO_PIN_8
 
-/* Dimensiunea bufferului PDM (eșantioane de 16 biți) */
-#define PDM_BUFFER_SIZE        1024
+#define T5838_WAKE_PORT		GPIOB
+#define T5838_WAKE_PIN		GPIO_PIN_1
 
-typedef enum {
-    T5838_STATE_SLEEP_AAD = 0,
-    T5838_STATE_WOKEN_UP,
-    T5838_STATE_STREAMING
-} T5838_State_t;
+#define T5838_INIT_STEPS	12
+#define T5838_PDM_BUF_SIZE	1024
 
-typedef struct {
-    I2C_HandleTypeDef *hi2c;
-    I2S_HandleTypeDef *hi2s;
-    GPIO_TypeDef      *wake_port;
-    uint16_t           wake_pin;
-    GPIO_TypeDef      *thsel_port;
-    uint16_t           thsel_pin;
-    volatile T5838_State_t state;
-    uint16_t           pdm_buffer[PDM_BUFFER_SIZE];
-} T5838_HandleTypeDef;
 
-/* API Driver */
-HAL_StatusTypeDef T5838_Init(T5838_HandleTypeDef *dev, I2C_HandleTypeDef *hi2c, I2S_HandleTypeDef *hi2s,
-                             GPIO_TypeDef *wake_port, uint16_t wake_pin,
-                             GPIO_TypeDef *thsel_port, uint16_t thsel_pin);
+// structura in care pun perechile registru-valoare ale secventei de initializare (12 pasi)
+typedef struct{
+	uint8_t reg;
+	uint8_t data;
+}T5838_RegisterConfig_t;
 
-void T5838_SetHardwareThresholdPin(T5838_HandleTypeDef *dev, uint8_t high_level);
-HAL_StatusTypeDef T5838_EnterAAD_D2Mode(T5838_HandleTypeDef *dev);
-void T5838_OnWakeInterrupt(T5838_HandleTypeDef *dev);
-HAL_StatusTypeDef T5838_StartPDMStream(T5838_HandleTypeDef *dev);
+typedef struct{
+	I2S_HandleTypeDef *hi2s;
+	UART_HandleTypeDef *huart;
+	uint16_t pdm_buffer[T5838_PDM_BUF_SIZE];
+	uint8_t is_initialized;
+	uint8_t is_recording;
+}T5838_HandleTypeDef;
 
-#endif /* INC_T5838_H_ */
+
+void T5838_InitTiming(void);
+HAL_StatusTypeDef T5838_Init(T5838_HandleTypeDef *hmic, I2S_HandleTypeDef *hi2s, UART_HandleTypeDef *huart);
+uint8_t T5838_WriteRegister(uint8_t reg_addr, uint8_t reg_data);
+
+void T5838_SetClockFrequency(T5838_HandleTypeDef* hmic, uint32_t freq_hz);
+void T5838_OnWakeInterrupt(T5838_HandleTypeDef *hmic);
+void T5838_ProcessAudioBlock(T5838_HandleTypeDef *hmic, uint16_t *pdm_data_ptr, uint16_t size);
+void T5838_StopRecording(T5838_HandleTypeDef *hmic);
+
+#endif
+
+
+

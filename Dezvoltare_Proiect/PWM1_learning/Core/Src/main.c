@@ -364,6 +364,25 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+// Callback-uri pentru procesare audio in fundal in timp de DMA umple bufferul
+// pentru jumatate de buffer
+/*void HAL_I2S_RxHalfCpltCallback(I2S_HandleTypeDef *hi2s){
+	extern T5838_HandleTypeDef hmic1;
+	if(hi2s->Instance==SPI2){
+		T5838_ProcessAudioBlock(&hmic1, &hmic1.pdm_buffer[0], T5838_PDM_BUF_SIZE/2);
+	}
+}
+
+// pentru buffer plin
+void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s){
+	extern T5838_HandleTypeDef hmic1;
+	if(hi2s->Instance==SPI2){
+		T5838_ProcessAudioBlock(&hmic1, &hmic1.pdm_buffer[T5838_PDM_BUF_SIZE/2], T5838_PDM_BUF_SIZE/2);
+	}
+}
+
+*/
+
 /* USER CODE END 4 */
 
 /**
