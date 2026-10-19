@@ -50,6 +50,7 @@ I2S_HandleTypeDef hi2s2;
 DMA_HandleTypeDef hdma_spi2_rx;
 
 UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_usart2_tx;
 
 /* USER CODE BEGIN PV */
 T5838_HandleTypeDef hmic1;
@@ -65,7 +66,7 @@ static void MX_I2C1_Init(void);
 static void MX_I2S2_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+static void I2S_PLL_Config(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -114,35 +115,21 @@ int main(void)
   MX_I2S2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
-  // aici trebuie sa incep secventa de initialziare a microfonului (cele 12 linii)
-
-
-  // de aici in jos trebuie sa fac partea de receptie intrerupere (de ack) si
-  // intregul mecanism de receptie intreruperi si/sau receptie de date pdm
-  // apoi trebuie sa fac conversia de la pdm la pcm
-  // apoi trebuie sa folosesc bibliotecile fft optimizate pentru platforma stm32f411re
-  // apoi sa trimit datele (trimit si audio pcm si analiza in frecventa, ca sa vad)
-
+  I2S_PLL_Config();   // PLLI2S: 2 MHz * 96 / 4 = 48 MHz catre SPI2
 
   printf("\r\n=========================================\r\n");
   printf("   Init T5838 PDM Microphone Driver      \r\n");
   printf("=========================================\r\n");
 
-  // 1. Configurare T5838 (Scrierea celor 12 registri AAD D2 și verificare ACK pe PA8)
   if (T5838_Init(&hmic1, &hi2s2, &huart2) != HAL_OK) {
-      printf("[EROARE] Configurarea T5838 a eșuat!\r\n");
-      Error_Handler();
+      printf("[EROARE] Configurarea T5838 a esuat (continui, pentru test captura)\r\n");
+      hmic1.is_initialized = 1;   // permite testul de captura chiar fara ACK
   }
 
-  printf("[OK] Microfon pregătit. Trecere în modul AAD D2 (Sleep)...\r\n");
-
-  //-----------------------
-  printf("[OK] Microfon pregătit. Trecere în modul AAD D2 (Sleep)...\r\n");
-
-    // FORȚĂM O RECEPTIE LA BOOT PENTRU TEST
-    wake_up_flag = 1;
-
+  #define T5838_BOOT_TEST  1      // 1 = forteaza o captura la boot
+  #if T5838_BOOT_TEST
+  wake_up_flag = 1;
+  #endif
 
   /* USER CODE END 2 */
 
@@ -150,37 +137,24 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      if (wake_up_flag) {
+          wake_up_flag = 0;
+          printf("\r\n[WAKE] Pornire captura PDM...\r\n");
 
-	  if (wake_up_flag==1) {
-	          wake_up_flag = 0;
-	          printf("\r\n[WAKE] Detecție pe PB1! Pornire captură PDM...\r\n");
-
-	          // 2. Comută frecvența I2S la 2 MHz (dacă a fost pe 100 kHz)
-	          T5838_SetClockFrequency(&hmic1, 2000000);
-	          HAL_Delay(20);
-
-	          // 3. Pornește achiziția DMA PDM în bufferul din structură
-	          hmic1.is_recording = 1;
-	          HAL_StatusTypeDef status = HAL_I2S_Receive_DMA(&hi2s2, (uint16_t*)hmic1.pdm_buffer, T5838_PDM_BUF_SIZE);
-	          if (status != HAL_OK) {
-	              printf("[DMA ERROR] Status cod: %d\r\n", status);
-	          }else {
-	              printf("[DMA OK] Transfer pornit cu succes!\r\n");
-	          }
-	          // Înregistrează timp de 5 secunde
-	          HAL_Delay(5000);
-
-	          // 4. Oprește achiziția DMA și revino în modul economisire
-	          T5838_StopRecording(&hmic1);
-
-	          printf("[SLEEP] Captură finalizată. Trecere înapoi în modul AAD D2.\r\n");
-	      }
-
-	      // Punem procesorul în Sleep Mode până la următoarea întrerupere EXTI (PB1 WAKE)
-	      //HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-	  HAL_Delay(10);
-
-
+          HAL_StatusTypeDef st = T5838_StartCapture(&hmic1);
+          if (st != HAL_OK) {
+              printf("[DMA ERROR] cod: %d\r\n", (int)st);
+          } else {
+              uint32_t t0 = HAL_GetTick();
+              while (HAL_GetTick() - t0 < 5000U) T5838_FlushUart(&hmic1);
+              T5838_StopRecording(&hmic1);
+              while (huart2.gState != HAL_UART_STATE_READY) {}
+              printf("\r\n[SLEEP] Captura gata (overrun ring: %lu). AAD D2 reactivat.\r\n",
+                     (unsigned long)hmic1.ring_overruns);
+          }
+          wake_up_flag = 0;    // ignora wake-urile aparute in timpul capturii
+      }
+      HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -211,7 +185,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 84;
+  RCC_OscInitStruct.PLL.PLLN = 100;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -228,7 +202,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -318,7 +292,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 921600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -348,6 +322,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream3_IRQn);
+  /* DMA1_Stream6_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
 
 }
 
@@ -394,23 +371,30 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-    if (GPIO_Pin == T5838_WAKE_PIN) { // T5838_WAKE_PIN este GPIO_PIN_1 (PB1)
-        wake_up_flag = 1;
+    if (GPIO_Pin == T5838_WAKE_PIN) {
+        if (t5838_expect_ack) t5838_ack_seen = 1;   // pulsul ACK de la enable
+        else                  wake_up_flag = 1;     // eveniment AAD
     }
 }
 
-// Interceptează prima jumătate a bufferului PDM completat de DMA
 void HAL_I2S_RxHalfCpltCallback(I2S_HandleTypeDef *hi2s) {
-    if (hi2s->Instance == SPI2) {
+    if (hi2s->Instance == SPI2)
         T5838_ProcessAudioBlock(&hmic1, &hmic1.pdm_buffer[0], T5838_PDM_BUF_SIZE / 2);
-    }
 }
 
-// Interceptează a doua jumătate a bufferului PDM completat de DMA
 void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s) {
-    if (hi2s->Instance == SPI2) {
+    if (hi2s->Instance == SPI2)
         T5838_ProcessAudioBlock(&hmic1, &hmic1.pdm_buffer[T5838_PDM_BUF_SIZE / 2], T5838_PDM_BUF_SIZE / 2);
-    }
+}
+
+static void I2S_PLL_Config(void)
+{
+    RCC_PeriphCLKInitTypeDef pc = {0};
+    pc.PeriphClockSelection = RCC_PERIPHCLK_I2S;
+    pc.PLLI2S.PLLI2SM = 8;     // HSI 16 MHz / 8 = 2 MHz
+    pc.PLLI2S.PLLI2SN = 96;    // VCO 192 MHz
+    pc.PLLI2S.PLLI2SR = 4;     // 48 MHz
+    if (HAL_RCCEx_PeriphCLKConfig(&pc) != HAL_OK) Error_Handler();
 }
 /* USER CODE END 4 */
 
